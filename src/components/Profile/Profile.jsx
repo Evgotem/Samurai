@@ -5,15 +5,15 @@ import MyPosts from './MyPosts/MyPosts';
 import ProfileInfo from './MyPosts/ProfileInfo/ProfileInfo';
 
 const Profile = () => {
-   return (
-      <div>
-         
-         <ProfileInfo />
+    return (
+        <div>
 
-         <MyPosts />
+            <ProfileInfo />
 
-      </div>
-   )
+            <MyPosts />
+
+        </div>
+    )
 }
 
 export default Profile;

@@ -1,0 +1,14 @@
+.dialog {
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 5px;
+    &.active {
+        a {
+            color: gold;
+        }
+    }
+    & a {
+        text-decoration: none;
+        color: #fff;
+    }
+}
