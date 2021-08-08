@@ -10,7 +10,6 @@ const DialogItem = (props) => {
       </div>
    )
 }
-
 const Message = (props) => {
    return (
       <div className={style.message}>
@@ -19,20 +18,30 @@ const Message = (props) => {
    )
 }
 
+let dialogs = [
+   { id:1, name:'Zhenya' },
+   { id:2, name:'Leopold' },
+   { id:3, name:'Mr. Money' }
+];
+let messages = [
+   { id:1, text:'React - it`s ez' },
+   { id:2, text:'Easy peasy lemon squeezy' },
+   { id:3, text:'Ez clap' }
+];
+
+let dialogsElements = dialogs.map( d => <DialogItem name={d.name} id={d.id} /> );
+
+let messagesElements = messages.map( m =>  <Message message={m.text} /> );
+
 const Dialogs = (props) => {
    return (
       <div className={style.dialogsWrapper}>
          <div className={style.dialogsItems}>
-
-            <DialogItem name={'Zhenya'} id={'1'} />
-            <DialogItem name={'Leopold'} id={'2'} />
-            <DialogItem name={'Mr. Money'} id={'3'} />
+            {dialogsElements}
          </div>
 
          <div className={style.messagesItems}>
-            <Message message='React - it`s ez' />
-            <Message message='Easy peasy lemon squeezy' />
-            <Message message=' Ez clap' />
+            {messagesElements}
          </div>
       </div>
    )
