@@ -1,0 +1,16 @@
+.nav {
+   grid-area: n;
+   background: #837e7e;
+}
+.navbarItem {
+   list-style: none;
+   padding: 5px;
+   a {
+      color: #fff;
+      text-decoration: none;
+      cursor: pointer;
+      &.active {
+         color: gold;
+      }
+   }
+}
