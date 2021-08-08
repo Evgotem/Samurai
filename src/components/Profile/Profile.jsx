@@ -5,13 +5,14 @@ import MyPosts from './MyPosts/MyPosts';
 
 const Profile = () => {
    return (
-      <div className={style.content}>
-            <div>
-               ava + desc
-            </div>
-
-            <MyPosts />
+      <div>
+         <div>
+            ava + desc
          </div>
+
+         <MyPosts />
+         
+      </div>
    )
 }
 
