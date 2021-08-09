@@ -1,0 +1,17 @@
+.friends {
+   display: flex;
+   &Item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 5px;
+
+      cursor: pointer;
+   }
+}
+.avatar {
+   width: 30px;
+   height: 30px;
+   border-radius: 50%;
+   background: gold;
+}
