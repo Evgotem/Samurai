@@ -10,11 +10,21 @@ let postsData = [
     { id: 2, message: 'Ez', likesCount: 2 },
     { id: 3, message: 'Breezy', likesCount: 3 }
 ];
+let dialogs = [
+   { id: 1, name: 'Zhenya' },
+   { id: 2, name: 'Leopold' },
+   { id: 3, name: 'Mr. Money' }
+];
+let messages = [
+   { id: 1, text: 'React - it`s ez' },
+   { id: 2, text: 'Easy peasy lemon squeezy' },
+   { id: 3, text: 'Ez clap' }
+];
 
 ReactDOM.render(
   <BrowserRouter>
      <React.StrictMode>
-       <App postsData={postsData} />
+       <App postsData={postsData} dialogs={dialogs} messages={messages} />
      </React.StrictMode>
   </BrowserRouter>,
   document.getElementById('root')
