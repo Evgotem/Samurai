@@ -1,3 +1,8 @@
+const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSAGE-TEXT';
+const ADD_MESSAGE = 'ADD-MESSAGE';
+const ADD_POST = 'ADD-POST';
+const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
+
 let store = {
    _state: {
       profilePage: {
@@ -36,6 +41,7 @@ let store = {
    subscribe(observer) {
       this._callSubscriber = observer; //observer // publisher-subscriber // addEventListener// паттерн
    },
+
    dispatch(action) {
       if(action.type === 'ADD-POST') {
          let newPost = {
@@ -64,6 +70,30 @@ let store = {
          this._state.dialogsPage.newMessage = action.newMessage;
          this._callSubscriber(this._state);
       }
+   }
+}
+
+export const onMessageChangeActionCreator = (text) => {
+   return {
+      type: UPDATE_NEW_MESSAGE_TEXT, 
+      newMessage: text
+   }
+}
+export const addMessageActionCreator = () => {
+   return {
+      type: ADD_MESSAGE
+   }
+}
+
+export const addPostActionCreator = () => {
+   return {
+      type: ADD_POST
+   }
+}
+export const updateNewPostTextActionCreator = (text) => {
+   return {
+      type: UPDATE_NEW_POST_TEXT, 
+      newText: text
    }
 }
 
