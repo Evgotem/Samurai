@@ -10,24 +10,15 @@ import Dialogs from './components/Dialogs/Dialogs';
 
 const App = (props) => {
    return (
-      <div className="appWrapper">
+      <div className='appWrapper'>
          <Header />
          <Navbar friends={props.state.friends} />
          <div className='appContent'>
             <Route path='/dialogs'
-               render={() => <Dialogs
-                  dialogsPage={props.state.dialogsPage}
-                  dispatch={props.dispatch} />}
+               render={() => <Dialogs dialogsPage={props.state.dialogsPage} dispatch={props.dispatch} />}
             />
             <Route path='/profile'
-               render={() =>
-                  <Profile
-                     profilePage={props.state.profilePage}
-                     dispatch={props.dispatch}
-                     
-                  />
-               }
-
+               render={() => <Profile profilePage={props.state.profilePage} dispatch={props.dispatch} />}
             />
          </div>
       </div>
