@@ -33,7 +33,6 @@ let store = {
    _callSubscriber() {
       console.log('state changed');
    },
-
    getState() {
       return this._state;
    },
