@@ -8,18 +8,14 @@ import Profile from './components/Profile/Profile';
 import DialogsContainer from './components/Dialogs/DialogsContainer';
 
 
-const App = (props) => {
+const App = () => {
    return (
       <div className='appWrapper'>
          <Header />
-         <Navbar friends={props.state.friends} />
+         <Navbar />
          <div className='appContent'>
-            <Route path='/dialogs'
-               render={() => <DialogsContainer  store={props.store} />}
-            />
-            <Route path='/profile'
-               render={() => <Profile store={props.store} />}
-            />
+            <Route path='/dialogs' render={() => <DialogsContainer />} />
+            <Route path='/profile' render={() => <Profile />} />
          </div>
       </div>
    );
