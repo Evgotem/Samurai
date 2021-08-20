@@ -8,3 +8,23 @@
       cursor: pointer;
    }
 }
+
+.selectedPage {
+   font-weight: bold;
+}
+
+span {
+   cursor: pointer;
+}
+.usersWrapper {
+   display: flex;
+   flex-wrap: wrap;
+}
+.user {
+   padding: 10px;
+   width: 150px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+}
