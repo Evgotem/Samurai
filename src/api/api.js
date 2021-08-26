@@ -8,10 +8,13 @@ const instanse = axios.create({
    }
 });
 
-export const getUsers = (currentPage=1, pageSize=10) => {
-   return instanse.get(`users?page=${currentPage}&count=${pageSize}`)
-   .then(response => response.data);
+export const usersAPI = {
+   getUsers(currentPage = 1, pageSize = 10) {
+      return instanse.get(`users?page=${currentPage}&count=${pageSize}`)
+         .then(response => response.data);
+   }
 }
+
 
 // export const getUsers2 = (currentPage=1, pageSize=10) => {
 //    return axios.get(`follow?page=${currentPage}&count=${pageSize}`)
