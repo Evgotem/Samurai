@@ -12,6 +12,12 @@ export const usersAPI = {
    getUsers(currentPage = 1, pageSize = 10) {
       return instanse.get(`users?page=${currentPage}&count=${pageSize}`)
          .then(response => response.data);
+   },
+   follow(userId){
+      return instanse.post(`https://social-network.samuraijs.com/api/1.0/follow/${userId}`)
+   },
+   unfollow(userId){
+      return instanse.delete(`https://social-network.samuraijs.com/api/1.0/follow/${userId}`)
    }
 }
 
